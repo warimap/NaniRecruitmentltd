@@ -1,0 +1,51 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'var(--font-geist-sans)', sans-serif;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(135deg, #232d54 0%, #624d69 100%);
+  }
+
+  .nav-link:hover {
+    color: #ad4f68;
+  }
+
+  .btn-primary {
+    background-color: #ad4f68;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: #8e3d55;
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background-color: #232d54;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    background-color: #1a2342;
+    transform: translateY(-2px);
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
